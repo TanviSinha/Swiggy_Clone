@@ -25,6 +25,8 @@ Project Features
     The app is responsive and works well on both mobile and desktop screens.
       Technical Details
         Angular: The project is built using Angular 17.
-        Tailwind CSS: The project utilizes Tailwind CSS for styling. Tailwind's utility-first approach provides flexibility and efficiency for designing the layout and   components.
+        Tailwind CSS: The project utilizes Tailwind CSS for styling.
+        Tailwind's utility-first approach provides flexibility and
+        efficiency for designing the layout and components.
         State Management: Angular services are used for managing the cart and restaurant data.
         Mock API: For simulating user interactions like order placement, the mock API is used to store order details.# Swiggy_Clone
