@@ -1,3 +1,6 @@
+# Deployment URL
+swiggy-clone-new-snowy.vercel.app/
+
 # Swiggy-like Platform
 This project implements a simplified version of a food discovery platform inspired by Swiggy, focusing on front-end functionality. It provides users with an interface to explore restaurants, cuisines, and menus, with a cart simulation feature. Static data is used to simulate menus, reviews, and other restaurant details, along with the user interaction features.
 
