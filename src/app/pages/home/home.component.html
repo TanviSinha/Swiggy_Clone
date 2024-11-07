@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="max-w-screen-lg mx-auto p-6 my-5">
+        <h2 class="text-3xl font-bold mb-6 text-left">What's on your mind?</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-4 my-8">
+          <ng-container *ngFor="let cuisine of cuisinesTop">
+            <div class="bg-white shadow-md rounded-lg p-4 text-center hover:shadow-lg transition">
+              <img
+                [src]="cuisine.image"
+                [alt]="cuisine.name"
+                class="w-full h-32 object-cover"
+              />
+            </div>
+          </ng-container>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-6 my-8">
+          <ng-container *ngFor="let cuisine of cuisinesBottom">
+            <div class="bg-white shadow-md rounded-lg p-4 text-center hover:shadow-lg transition">
+              <img
+                [src]="cuisine.image"
+                [alt]="cuisine.name"
+                class="w-full h-32 object-cover"
+              />
+            </div>
+          </ng-container>
+        </div>
+      </div>      
+<!------------------Restaurant Component Shown Here----------------->
+      <div class="max-w-screen-lg mx-auto p-6 my-8">
+        <h2 class="text-3xl font-bold mb-6 text-left">Explore Our Restaurants</h2> 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <app-restaurant-card *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant-card>
+        </div>
+      </div>  
+</body>
+</html>
+  

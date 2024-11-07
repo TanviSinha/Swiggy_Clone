@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="restaurant-card" [routerLink]="['/restaurant', restaurant.id, 'menu']">
+  <div class="relative">
+    <img [src]="restaurant.image" alt="{{ restaurant.name }}" class="w-full h-40 object-cover">
+    <div *ngIf="restaurant.offer" class="absolute bottom-0 left-2 text-white text-xl font-bold px-2 py-1 rounded">
+      {{ restaurant.offer }}
+    </div>
+  </div>
+  <div class="p-4">
+    <h3 class="text-xl font-semibold">{{ restaurant.name }}</h3>
+    <p class="text-gray-500">{{ restaurant.rating }} ⭐ • {{ restaurant.time }}</p>
+    <p class="text-gray-700">{{ restaurant.cuisine }}</p>
+    <p class="text-gray-400">{{ restaurant.location }}</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="flex flex-col items-start mt-10 ml-36"> 
+    <div class="flex items-start w-full max-w-xl space-x-4"> 
+      <input 
+        type="text" 
+        placeholder="Search for a Restaurant and Food" 
+        [(ngModel)]="searchQuery"
+        class="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"/>
+      <button (click)="onSearch()" 
+        class="p-4 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+        Search
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="searchResults.length > 0; else noResults" class="mt-6 ml-36">
+    <h2 class="text-2xl font-bold mb-4">Search Results:</h2>
+    <ul>
+      <li *ngFor="let result of searchResults" class="mb-2">{{ result }}</li>
+    </ul>
+  </div>
+  <ng-template #noResults>
+    <div class="mt-6 ml-36">
+      <h2 *ngIf="searchQuery" class="text-xl text-gray-600">No restaurant found</h2>
+    </div>
+  </ng-template>
+  <div class="max-w-screen-lg mx-auto p-6 my-5">
+  <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-4 mt-6 my-8">
+    <ng-container *ngFor="let cuisine of cuisinesBottom">
+      <div class="bg-white shadow-md rounded-lg p-4 text-center hover:shadow-lg transition">
+        <img
+          [src]="cuisine.image"
+          [alt]="cuisine.name"
+          class="w-full h-32 object-cover"
+        />
+      </div>
+    </ng-container>
+  </div>
+  </div>
+      
+</body>
+</html>
