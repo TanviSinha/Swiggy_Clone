@@ -29,4 +29,5 @@ Project Features
         Tailwind's utility-first approach provides flexibility and
         efficiency for designing the layout and components.
         State Management: Angular services are used for managing the cart and restaurant data.
-        Mock API: For simulating user interactions like order placement, the mock API is used to store order details.# Swiggy_Clone
+        Mock API: For simulating user interactions like order placement, the mock API is used to store order details.
+   
